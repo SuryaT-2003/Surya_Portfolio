@@ -137,7 +137,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileNavMenu = document.getElementById('mobile-nav-menu');
 
     menuToggle.addEventListener('click', function() {
-        mobileNavMenu.classList.toggle('hidden'); // Toggle visibility
+        mobileNavMenu.classList.toggle('active'); // Toggle visibility
     });
 });
+
 
