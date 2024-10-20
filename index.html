@@ -16,11 +16,11 @@
 
 </head>
 <body>
-  <!-- Navigation -->
+ <!-- Navigation -->
 <nav class="bg-white shadow-md">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#home" class="text-2xl font-bold text-gray-800">Surya T</a>
-        <div class="menu-toggle md:hidden cursor-pointer">
+        <div class="menu-toggle cursor-pointer md:hidden">
             <i class="fas fa-bars"></i>
         </div>
         <ul class="flex space-x-4 md:flex md:space-x-6 hidden md:block" id="nav-menu">
@@ -31,13 +31,16 @@
         </ul>
     </div>
     <!-- Mobile Menu -->
-    <ul class="md:hidden flex space-x-4 bg-white py-2 absolute left-0 right-0 top-16" id="mobile-nav-menu">
-        <li><a href="#about" class="nav-link hover:text-blue-500">About</a></li>
-        <li><a href="#projects" class="nav-link hover:text-blue-500">Projects</a></li>
-        <li><a href="#contact" class="nav-link hover:text-blue-500">Contact</a></li>
-        <li><a href="#resume" class="nav-link hover:text-blue-500">Resume</a></li>
-    </ul>
+    <div class="md:hidden relative">
+        <ul class="absolute left-0 right-0 top-16 bg-white shadow-md hidden" id="mobile-nav-menu">
+            <li><a href="#about" class="nav-link hover:text-blue-500 py-2 px-4">About</a></li>
+            <li><a href="#projects" class="nav-link hover:text-blue-500 py-2 px-4">Projects</a></li>
+            <li><a href="#contact" class="nav-link hover:text-blue-500 py-2 px-4">Contact</a></li>
+            <li><a href="#resume" class="nav-link hover:text-blue-500 py-2 px-4">Resume</a></li>
+        </ul>
+    </div>
 </nav>
+
 
 
 
