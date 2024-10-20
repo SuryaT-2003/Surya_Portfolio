@@ -16,30 +16,89 @@
 
 </head>
 <body>
- <!-- Navigation -->
-<nav class="bg-white shadow-md">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#home" class="text-2xl font-bold text-gray-800">Surya T</a>
-        <div class="menu-toggle cursor-pointer md:hidden">
-            <i class="fas fa-bars"></i>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surya T - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome -->
+    <style>
+        /* Inline CSS */
+        .menu-toggle {
+            display: block; /* Show the toggle button on mobile */
+            cursor: pointer;
+        }
+
+        #mobile-nav-menu {
+            display: none; /* Initially hidden */
+            flex-direction: column; /* Stack items vertically */
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 60px; /* Adjust based on navbar height */
+            background: white;
+            z-index: 10; /* Ensure it appears above other content */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+        }
+
+        #mobile-nav-menu.active {
+            display: flex; /* Show the menu when active */
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem; /* Padding for links */
+            text-decoration: none;
+            color: #4A5568; /* Default link color */
+        }
+
+        .nav-link:hover {
+            color: #3B82F6; /* Hover color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-gray-800">Surya T</a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="flex space-x-4 md:flex md:space-x-6 hidden md:block" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+            </ul>
         </div>
-        <ul class="flex space-x-4 md:flex md:space-x-6 hidden md:block" id="nav-menu">
-            <li><a href="#about" class="nav-link hover:text-blue-500">About</a></li>
-            <li><a href="#projects" class="nav-link hover:text-blue-500">Projects</a></li>
-            <li><a href="#contact" class="nav-link hover:text-blue-500">Contact</a></li>
-            <li><a href="#resume" class="nav-link hover:text-blue-500">Resume</a></li>
-        </ul>
-    </div>
-    <!-- Mobile Menu -->
-    <div class="md:hidden relative">
-        <ul class="absolute left-0 right-0 top-16 bg-white shadow-md hidden" id="mobile-nav-menu">
-            <li><a href="#about" class="nav-link hover:text-blue-500 py-2 px-4">About</a></li>
-            <li><a href="#projects" class="nav-link hover:text-blue-500 py-2 px-4">Projects</a></li>
-            <li><a href="#contact" class="nav-link hover:text-blue-500 py-2 px-4">Contact</a></li>
-            <li><a href="#resume" class="nav-link hover:text-blue-500 py-2 px-4">Resume</a></li>
-        </ul>
-    </div>
-</nav>
+        <!-- Mobile Menu -->
+        <div class="md:hidden relative">
+            <ul id="mobile-nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        // Inline JavaScript for mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNavMenu = document.getElementById('mobile-nav-menu');
+
+            menuToggle.addEventListener('click', function() {
+                mobileNavMenu.classList.toggle('active'); // Toggle visibility
+            });
+        });
+    </script>
+</body>
+</html>
+
 
 
 
