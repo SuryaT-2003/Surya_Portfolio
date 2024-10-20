@@ -12,7 +12,6 @@ body {
     scroll-behavior: smooth;
 }
 
-
 @keyframes dance {
     0% {
         transform: translateX(0);
@@ -34,7 +33,6 @@ body {
 .dance {
     animation: dance 0.5s ease;
 }
-
 
 /* Section styling */
 #internships {
@@ -84,7 +82,6 @@ body {
     margin-bottom: 0.5rem; /* Spacing between list items */
 }
 
-
 .container {
     width: 90%;
     max-width: 1200px;
@@ -105,62 +102,6 @@ h1, h2, h3 {
 p {
     margin-bottom: 15px;
     text-align: center;
-}
-
-/* Navigation */
-nav {
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-nav .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    padding: 5px 10px;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: #007BFF;
-    border-bottom: 2px solid #007BFF;
-}
-
-/* Menu Toggle (Hamburger) */
-.menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #333;
 }
 
 /* Home Section */
@@ -251,6 +192,7 @@ nav .logo {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
 .social-links {
     margin-top: 10px; /* Space above social links */
 }
@@ -394,39 +336,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* Show hamburger menu */
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Hide navigation links by default */
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        background: #fff;
-        flex-direction: column;
-        align-items: center;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-    }
-
-    .nav-links a {
-        font-size: 1.2rem;
-    }
-
-    /* Show navigation when active */
-    .nav-links.active {
-        max-height: 500px; /* Arbitrary large value to show menu */
-    }
-
     /* Adjust home section padding */
     .home-container {
         padding-top: 80px;
@@ -471,28 +380,4 @@ footer {
     .project-card img {
         height: 120px;
     }
-
-    .nav-links a {
-        font-size: 1rem;
-    }
 }
-/* styles.css */
-.menu-toggle {
-    display: block; /* Show the toggle button on mobile */
-}
-
-#mobile-nav-menu {
-    display: none; /* Initially hidden */
-    flex-direction: column; /* Stack items vertically */
-    z-index: 10; /* Ensure it appears above other content */
-}
-
-/* Show the menu when it has the 'active' class */
-#mobile-nav-menu.active {
-    display: flex; /* Show the menu */
-}
-
-.nav-link {
-    padding: 0.5rem 1rem; /* Padding for links */
-}
-
