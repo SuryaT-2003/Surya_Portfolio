@@ -34,6 +34,44 @@
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
+    <!-- Navigation -->
+<nav class="bg-white shadow-md fixed w-full z-10 fade-in">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="#home" class="text-2xl font-bold text-gray-800 hover:text-blue-500 transition duration-300">Surya T</a>
+
+        <!-- Menu Toggle Button for Mobile -->
+        <div class="menu-toggle cursor-pointer md:hidden" id="menu-toggle">
+            <i class="fas fa-bars text-xl"></i>
+        </div>
+
+        <!-- Menu Links -->
+        <ul class="hidden md:flex space-x-6" id="nav-menu">
+            <li><a href="#about" class="nav-link hover:text-blue-500 transition duration-300">About</a></li>
+            <li><a href="#projects" class="nav-link hover:text-blue-500 transition duration-300">Projects</a></li>
+            <li><a href="#contact" class="nav-link hover:text-blue-500 transition duration-300">Contact</a></li>
+            <li><a href="#resume" class="nav-link hover:text-blue-500 transition duration-300">Resume</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Mobile Menu (Hidden by default) -->
+<ul class="hidden flex-col space-y-4 bg-white text-center mt-2 py-4 shadow-md md:hidden" id="mobile-nav-menu">
+    <li><a href="#about" class="nav-link hover:text-blue-500 transition duration-300">About</a></li>
+    <li><a href="#projects" class="nav-link hover:text-blue-500 transition duration-300">Projects</a></li>
+    <li><a href="#contact" class="nav-link hover:text-blue-500 transition duration-300">Contact</a></li>
+    <li><a href="#resume" class="nav-link hover:text-blue-500 transition duration-300">Resume</a></li>
+</ul>
+
+<!-- Script to Toggle Mobile Menu -->
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNavMenu = document.getElementById('mobile-nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileNavMenu.classList.toggle('hidden');
+    });
+</script>
+
 
     
 
