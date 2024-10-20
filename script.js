@@ -131,3 +131,13 @@ document.querySelectorAll('.accordion-button').forEach(button => {
         button.classList.add('dance');
     });
 });
+// JavaScript for mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNavMenu = document.getElementById('mobile-nav-menu');
+
+    menuToggle.addEventListener('click', function() {
+        mobileNavMenu.classList.toggle('hidden'); // Toggle visibility
+    });
+});
+
