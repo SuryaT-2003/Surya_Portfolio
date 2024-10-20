@@ -73,26 +73,42 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section py-16 bg-gray-200 fade-in">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-6 text-center text-indigo-600">Projects</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <!-- Project 1 -->
-                <div class="project-card bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
-                    <img src="image copy.png" alt="Employee Management Application" class="rounded">
-                    <h3 class="text-xl font-semibold mt-2">Employee Management Application</h3>
-                    <p>Developed an Employee Manager Application using Spring Boot, React, and MySQL. Implemented RESTful APIs and ORM mappings for efficient data handling. Designed a responsive frontend for seamless user experience.</p>
-                </div>
-                <!-- Project 2 -->
-                <div class="project-card bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
-                    <img src="image.png" alt="E-commerce Platform" class="rounded">
-                    <h3 class="text-xl font-semibold mt-2">E-commerce Platform (MERN Stack)</h3>
-                    <p>Created a full-stack e-commerce platform enabling product browsing and cart management. Implemented RESTful APIs for user authentication and order processing. Optimized MongoDB for efficient data retrieval and scalability.</p>
-                </div>
+   <!-- Projects Section -->
+<section id="projects" class="section py-16 bg-gray-200 fade-in">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-6 text-center text-indigo-600">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Project 1 -->
+            <div class="project-card bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300"
+                 onclick="animateCard(this)">
+                <img src="image copy.png" alt="Employee Management Application" class="rounded">
+                <h3 class="text-xl font-semibold mt-2">Employee Management Application</h3>
+                <p>Developed an Employee Manager Application using Spring Boot, React, and MySQL. Implemented RESTful APIs and ORM mappings for efficient data handling. Designed a responsive frontend for seamless user experience.</p>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300"
+                 onclick="animateCard(this)">
+                <img src="image.png" alt="E-commerce Platform" class="rounded">
+                <h3 class="text-xl font-semibold mt-2">E-commerce Platform (MERN Stack)</h3>
+                <p>Created a full-stack e-commerce platform enabling product browsing and cart management. Implemented RESTful APIs for user authentication and order processing. Optimized MongoDB for efficient data retrieval and scalability.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<script>
+    // Function to animate the clicked card
+    function animateCard(card) {
+        card.style.transition = "transform 0.4s ease-in-out"; // Smooth transition
+        card.style.transform = "scale(1.1)"; // Scale the card up on click
+
+        // Optional: Reset the animation after 0.4 seconds
+        setTimeout(() => {
+            card.style.transform = "scale(1)"; // Scale back to normal size
+        }, 400);
+    }
+</script>
+
 
     <!-- Contact Section -->
     <section id="contact" class="section py-16 bg-white slide-in-left">
@@ -125,11 +141,22 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-6">
-        <div class="container mx-auto text-center text-gray-400">
-            <p>&copy; 2024 Surya T. All rights reserved.</p>
+<footer class="bg-gray-800 py-6">
+    <div class="container mx-auto text-center text-gray-400">
+        <p>&copy; 2024 Surya T. All rights reserved.</p>
+        <div class="mt-4">
+            <!-- LinkedIn Icon -->
+            <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank" class="text-gray-400 hover:text-white mx-2">
+                <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
+            </a>
+            <!-- GitHub Icon -->
+            <a href="https://github.com/SuryaT-2003" target="_blank" class="text-gray-400 hover:text-white mx-2">
+                <i class="bi bi-github" style="font-size: 1.5rem;"></i>
+            </a>
         </div>
-    </footer>
+    </div>
+</footer>
+
 
 </body>
 </html>
