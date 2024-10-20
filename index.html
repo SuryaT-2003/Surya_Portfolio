@@ -6,6 +6,8 @@
     <title>Surya T - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTU5zHb1/1FypJ4x4tveWVf5em4jtMx7dpHog4lD8PbtvEUX+1ZxjJQ2eB2Gr2a3v4f9iN5hdA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .fade-in {
@@ -33,21 +35,7 @@
 </head>
 <body class="bg-gray-100 text-gray-900">
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full z-10 fade-in">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-gray-800 hover:text-blue-500 transition duration-300">Surya T</a>
-            <div class="menu-toggle cursor-pointer md:hidden">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="hidden md:flex space-x-6" id="nav-menu">
-                <li><a href="#about" class="nav-link hover:text-blue-500 transition duration-300">About</a></li>
-                <li><a href="#projects" class="nav-link hover:text-blue-500 transition duration-300">Projects</a></li>
-                <li><a href="#contact" class="nav-link hover:text-blue-500 transition duration-300">Contact</a></li>
-                <li><a href="#resume" class="nav-link hover:text-blue-500 transition duration-300">Resume</a></li>
-            </ul>
-        </div>
-    </nav>
+    
 
     <!-- Home Section -->
     <section id="home" class="section h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white fade-in">
@@ -58,20 +46,20 @@
             <a href="#contact" class="btn bg-white text-indigo-600 font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-gray-100 transition duration-300">Get in Touch</a>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section id="about" class="section py-16 bg-gray-50 slide-in-left">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-4 text-center text-indigo-600">About Me</h2>
-            <div class="md:flex md:items-center">
-                <img src="about_image.jpg" alt="About Me" class="rounded-lg shadow-md w-full md:w-1/3 mb-6 md:mb-0 md:mr-8">
-                <div>
-                    <p class="text-lg leading-relaxed">Aiming to leverage the MERN stack (MongoDB, Express.js, React, Node.js) and Java Full Stack development (Java, Spring Boot) to build scalable web applications that enable seamless data flow and robust user interaction.</p>
-                    <p class="text-lg leading-relaxed mt-4">Aspiring to develop expertise in artificial intelligence and machine learning to design intelligent systems, drive innovation in AI engineering, and contribute to cutting-edge technological advancements.</p>
-                </div>
+<!-- About Section -->
+<section id="about" class="section py-16 bg-gray-50 slide-in-left">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4 text-center text-indigo-600">About Me</h2>
+        <div class="md:flex md:items-center">
+            <div>
+                <p class="text-lg leading-relaxed">Aiming to leverage the MERN stack (MongoDB, Express.js, React, Node.js) and Java Full Stack development (Java, Spring Boot) to build scalable web applications that enable seamless data flow and robust user interaction.</p>
+                <p class="text-lg leading-relaxed mt-4">Aspiring to develop expertise in artificial intelligence and machine learning to design intelligent systems, drive innovation in AI engineering, and contribute to cutting-edge technological advancements.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+    
 
    <!-- Projects Section -->
 <section id="projects" class="section py-16 bg-gray-200 fade-in">
@@ -139,8 +127,7 @@
             </form>
         </div>
     </section>
-
-    <!-- Footer -->
+<!-- Footer -->
 <footer class="bg-gray-800 py-6">
     <div class="container mx-auto text-center text-gray-400">
         <p>&copy; 2024 Surya T. All rights reserved.</p>
@@ -156,6 +143,8 @@
         </div>
     </div>
 </footer>
+
+
 
 
 </body>
