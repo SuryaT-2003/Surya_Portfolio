@@ -496,3 +496,23 @@ footer {
         font-size: 1rem;
     }
 }
+/* styles.css */
+.menu-toggle {
+    display: block; /* Show the toggle button on mobile */
+}
+
+#mobile-nav-menu {
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Stack items vertically */
+    z-index: 10; /* Ensure it appears above other content */
+}
+
+/* Show the menu when it has the 'active' class */
+#mobile-nav-menu.active {
+    display: flex; /* Show the menu */
+}
+
+.nav-link {
+    padding: 0.5rem 1rem; /* Padding for links */
+}
+
