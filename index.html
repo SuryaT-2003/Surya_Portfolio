@@ -16,21 +16,29 @@
 
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-gray-800">Surya T</a>
-            <ul class="flex space-x-4">
-                <li><a href="#about" class="nav-link hover:text-blue-500">About</a></li>
-                <li><a href="#projects" class="nav-link hover:text-blue-500">Projects</a></li>
-                <li><a href="#contact" class="nav-link hover:text-blue-500">Contact</a></li>
-                <li><a href="#resume" class="nav-link hover:text-blue-500">Resume</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+  <!-- Navigation -->
+<nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="#home" class="text-2xl font-bold text-gray-800">Surya T</a>
+        <div class="menu-toggle md:hidden cursor-pointer">
+            <i class="fas fa-bars"></i>
         </div>
-    </nav>
+        <ul class="flex space-x-4 md:flex md:space-x-6 hidden md:block" id="nav-menu">
+            <li><a href="#about" class="nav-link hover:text-blue-500">About</a></li>
+            <li><a href="#projects" class="nav-link hover:text-blue-500">Projects</a></li>
+            <li><a href="#contact" class="nav-link hover:text-blue-500">Contact</a></li>
+            <li><a href="#resume" class="nav-link hover:text-blue-500">Resume</a></li>
+        </ul>
+    </div>
+    <!-- Mobile Menu -->
+    <ul class="md:hidden flex flex-col bg-white absolute left-0 right-0 top-16 hidden" id="mobile-nav-menu">
+        <li><a href="#about" class="nav-link hover:text-blue-500 py-2 px-4">About</a></li>
+        <li><a href="#projects" class="nav-link hover:text-blue-500 py-2 px-4">Projects</a></li>
+        <li><a href="#contact" class="nav-link hover:text-blue-500 py-2 px-4">Contact</a></li>
+        <li><a href="#resume" class="nav-link hover:text-blue-500 py-2 px-4">Resume</a></li>
+    </ul>
+</nav>
+
 
     <!-- Home Section -->
     <section id="home" class="section">
