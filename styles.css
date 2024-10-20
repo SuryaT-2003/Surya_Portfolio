@@ -11,27 +11,7 @@ body {
     color: #333;
     scroll-behavior: smooth;
 }
-/* styles.css */
-.menu-toggle {
-    display: none; /* Hide by default */
-}
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show the toggle button on mobile */
-    }
-    #mobile-nav-menu {
-        display: flex; /* Show mobile menu by default */
-        justify-content: space-around; /* Space items evenly */
-        align-items: center; /* Center items vertically */
-        background: white; /* Background for mobile menu */
-        position: absolute; /* Position it over the content */
-        top: 60px; /* Adjust based on navbar height */
-        left: 0;
-        right: 0;
-        z-index: 10; /* Ensure it appears above other content */
-    }
-}
 
 @keyframes dance {
     0% {
