@@ -14,11 +14,6 @@ function smoothScroll(e) {
         top: targetSection.offsetTop - 70, // Adjust for fixed nav height
         behavior: 'smooth'
     });
-
-    // Close mobile menu after clicking
-    if (window.innerWidth < 768) {
-        navLinksContainer.classList.remove('active');
-    }
 }
 
 // Active Navigation Link Highlighting
@@ -103,22 +98,7 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-// Mobile Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinksContainer = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-    navLinksContainer.classList.toggle('active');
-});
-
-// Close the menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!navLinksContainer.contains(e.target) && !menuToggle.contains(e.target)) {
-        if (navLinksContainer.classList.contains('active')) {
-            navLinksContainer.classList.remove('active');
-        }
-    }
-});
+// Accordion Button Animation
 document.querySelectorAll('.accordion-button').forEach(button => {
     button.addEventListener('click', function() {
         // Remove the dance class if it exists
@@ -131,14 +111,3 @@ document.querySelectorAll('.accordion-button').forEach(button => {
         button.classList.add('dance');
     });
 });
-// JavaScript for mobile menu toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mobileNavMenu = document.getElementById('mobile-nav-menu');
-
-    menuToggle.addEventListener('click', function() {
-        mobileNavMenu.classList.toggle('active'); // Toggle visibility
-    });
-});
-
-
