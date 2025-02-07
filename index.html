@@ -9,111 +9,100 @@
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTU5zHb1/1FypJ4x4tveWVf5em4jtMx7dpHog4lD8PbtvEUX+1ZxjJQ2eB2Gr2a3v4f9iN5hdA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .fade-in {
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        .slide-in-left {
-            animation: slideInLeft 1s ease-in-out;
-        }
-        @keyframes slideInLeft {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(0); }
-        }
-        .bounce {
-            animation: bounce 1.2s infinite;
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        /* Button Resume Styles */
-.btn-resume {
-    background-color: #4f46e5; /* Indigo background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Define top/bottom and left/right padding */
-    border-radius: 4px; /* Slightly rounded corners */
-    text-decoration: none; /* Remove underline */
-    display: inline-block;
-    font-size: 1rem; /* Font size */
-    transition: background-color 0.3s ease; /* Smooth hover transition */
-}
 
-/* Hover effect for the button */
-.btn-resume:hover {
-    background-color: #4338ca; /* Darker indigo on hover */
-}
-
-        /* Additional Styling for the About Section */
-.text-lg {
-    line-height: 1.6; /* Improved readability with line height */
-}
-
-/* Hover effect for list items */
-.list-disc li {
-    transition: color 0.3s ease;
-    margin-top: 10px;  /* Smooth transition for hover color */
-}
-
-.list-disc li:hover {
-    color: #4F46E5;
-     /* Change color on hover */
-}
-.list-disc {
-    margin-left: 20px; /* Adjust this value as needed */
-}
-#close-menu:hover {
-    background-color: rgba(100, 100, 100, 0.1); /* Light gray background on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
-}
-/* Mobile Menu Styles */
-
-/* Close button styles */
-#close-menu {
-    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white */
-    border-radius: 50%; /* Circular button */
-}
-
-/* Close button hover effect */
-#close-menu:hover {
-    background-color: rgba(255, 255, 255, 0.4); /* Lighter on hover */
-}
-
-/* Navigation links styles */
-#mobile-menu ul li a {
-    color: #fff; /* White text for links */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
-    padding: 10px 15px; /* Increased padding for a better touch target */
-}
-#mobile-menu {
-    background-color: darkorchid;
-    color: #fff; /* White text color */
-    border-radius: 10px 0 0 10px; /* Rounded corners on the left */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-}
-
-/* Navigation links hover effect */
-#mobile-menu ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Light background on hover */
-    border-radius: 5px; /* Rounded corners for links */
-}
-
-
-/* When active, set the width to 40% */
-#mobile-menu.active {
-    width: 30%; /* Expand to 40% */
-}
-
-
-        
-    </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
+<style>
+    /* Global Animations */
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
 
+    @keyframes glow {
+        0% { box-shadow: 0 0 10px rgba(79, 70, 229, 0.6); }
+        50% { box-shadow: 0 0 20px rgba(79, 70, 229, 0.8); }
+        100% { box-shadow: 0 0 10px rgba(79, 70, 229, 0.6); }
+    }
+
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Home Section Enhancements */
+    #home {
+        background: linear-gradient(135deg, #4f46e5, #9333ea);
+        animation: gradientShift 10s ease infinite;
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .profile-image {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    .profile-image svg circle {
+        animation: rotate 10s linear infinite;
+    }
+
+    .btn-get-in-touch {
+        animation: glow 2s infinite;
+    }
+
+    /* About Section Enhancements */
+    .about-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Projects Section Enhancements */
+    .project-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Contact Section Enhancements */
+    .contact-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-send-message {
+        animation: glow 2s infinite;
+    }
+
+    /* Footer Enhancements */
+    footer {
+        background: linear-gradient(135deg, #4f46e5, #9333ea);
+        animation: gradientShift 10s ease infinite;
+    }
+
+    .social-icon {
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icon:hover {
+        transform: translateY(-5px);
+        color: #fff;
+    }
+</style> give still more advmace styling
 <!-- Navigation -->
 <nav class="bg-white shadow-md fixed w-full z-10 fade-in">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
