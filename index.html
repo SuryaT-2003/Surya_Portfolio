@@ -1,5 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+/* Global Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(79, 70, 229, 0.6); }
+    50% { box-shadow: 0 0 20px rgba(79, 70, 229, 0.8); }
+    100% { box-shadow: 0 0 10px rgba(79, 70, 229, 0.6); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Home Section Enhancements */
+#home {
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.profile-image {
+    animation: float 4s ease-in-out infinite, glow 3s infinite alternate;
+    border-radius: 50%;
+    border: 5px solid white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.btn-get-in-touch {
+    display: inline-block;
+    background: white;
+    color: #4f46e5;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: glow 2s infinite alternate;
+}
+
+.btn-get-in-touch:hover {
+    background: #9333ea;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* About Section Enhancements */
+.about-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Projects Section Enhancements */
+.project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section Enhancements */
+.contact-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-send-message {
+    display: inline-block;
+    background: #4f46e5;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    animation: glow 2s infinite alternate;
+}
+
+.btn-send-message:hover {
+    background: #9333ea;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Footer Enhancements */
+footer {
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease-in-out infinite;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px) scale(1.2);
+    color: #fff;
+}
+
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,97 +154,7 @@
 
 </head>
 <body class="bg-gray-100 text-gray-900">
-<style>
-    /* Global Animations */
-    @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-    }
 
-    @keyframes glow {
-        0% { box-shadow: 0 0 10px rgba(79, 70, 229, 0.6); }
-        50% { box-shadow: 0 0 20px rgba(79, 70, 229, 0.8); }
-        100% { box-shadow: 0 0 10px rgba(79, 70, 229, 0.6); }
-    }
-
-    @keyframes rotate {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-
-    /* Home Section Enhancements */
-    #home {
-        background: linear-gradient(135deg, #4f46e5, #9333ea);
-        animation: gradientShift 10s ease infinite;
-    }
-
-    @keyframes gradientShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-
-    .profile-image {
-        animation: float 4s ease-in-out infinite;
-    }
-
-    .profile-image svg circle {
-        animation: rotate 10s linear infinite;
-    }
-
-    .btn-get-in-touch {
-        animation: glow 2s infinite;
-    }
-
-    /* About Section Enhancements */
-    .about-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .about-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Projects Section Enhancements */
-    .project-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Contact Section Enhancements */
-    .contact-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .contact-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-send-message {
-        animation: glow 2s infinite;
-    }
-
-    /* Footer Enhancements */
-    footer {
-        background: linear-gradient(135deg, #4f46e5, #9333ea);
-        animation: gradientShift 10s ease infinite;
-    }
-
-    .social-icon {
-        transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .social-icon:hover {
-        transform: translateY(-5px);
-        color: #fff;
-    }
-</style> give still more advmace styling
 <!-- Navigation -->
 <nav class="bg-white shadow-md fixed w-full z-10 fade-in">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
